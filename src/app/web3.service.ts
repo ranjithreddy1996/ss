@@ -9,9 +9,9 @@ const contractAbi2 = require("./abi-contract2.json");
 const contractAbi3 = require("./abi-contract3.json");
 
 const ethereum = window.ethereum;
-const contractAddress = "0xd33f5970279c2e5cf1e6b2db229f29bde5a30af6";
-const contractAddress2 = "0x18909e863e5ba87faa3783c8a93c6b163678431a";
-const contractAddress3 = "0x3e40d33dfa8551fb59df10ba90300cef3ba6c28a";
+const contractAddress = "0x4081bd95904321a03bab6be7bd541ce6122a6892";
+const contractAddress2 = "0x3d465436c59b9302f864c532cd0177e679190e83";
+const contractAddress3 = "0x19a24770508fc1d8cc4c71c5bda0c80fb3381601";
 
 declare let window: any
 declare let require: any;
@@ -55,7 +55,7 @@ export class Web3Service {
     }
 
     else if (typeof window.web3 !== 'undefined') {
-      this._web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+      this._web3 = new Web3(new Web3.providers.HttpProvider("HTTP://103.67.238.186:30303"));
       this._contract = await new this._web3.eth.Contract(contractAbi, contractAddress);
       this._contract2 = await new this._web3.eth.Contract(contractAbi2, contractAddress2);
       this._contract3 = await new this._web3.eth.Contract(contractAbi3, contractAddress3);

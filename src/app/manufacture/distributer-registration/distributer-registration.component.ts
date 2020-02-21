@@ -121,22 +121,22 @@ export class DistributerRegistrationComponent implements OnInit {
           }, () => {
           }
         );
-        //     let sms = {
-        //       number: ServiceData.mobile_number, 
-        //   id: ServiceData.id,
-        //  pass: result[3],
+            let sms = {
+              number: ServiceData.mobile_number, 
+          id: ServiceData.id,
+         pass: result[3],
 
-        //   }
-        //   this.http.sendSmss("http://localhost:4000/sendsms", sms).subscribe(
-        //   smsdata => {
-        //     let res:any = smsdata; 
-        //     console.log('successfully registered and sms has been sent');
-        //   },
-        //   err => {
-        //     console.log(err);
-        //   },() => {
-        //   }
-        //   );
+          }
+          this.http.sendSmss("http://localhost:4000/sendsms", sms).subscribe(
+          smsdata => {
+            let res:any = smsdata; 
+            console.log('successfully registered and sms has been sent');
+          },
+          err => {
+            console.log(err);
+          },() => {
+          }
+          );
         this.ngOnInit();
 
       })

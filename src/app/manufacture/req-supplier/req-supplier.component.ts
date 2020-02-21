@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal, NgbModalRef, NgbModalOptions, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { Web3Service } from 'src/app/web3.service';
 import Swal from 'sweetalert2';
-import * as XLSX from 'ts-xlsx';
+// import * as XLSX from 'ts-xlsx';
 
 
 
@@ -121,48 +121,48 @@ export class ReqSupplierComponent implements OnInit {
     console.log(this.file);
 
   }
-  Viewexcel() {
+  // Viewexcel() {
 
-    let fileReader = new FileReader();
-    fileReader.onload = (e) => {
-      this.arrayBuffer = fileReader.result;
-      var data = new Uint8Array(this.arrayBuffer);
-      var arr = new Array();
-      for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
-      var bstr = arr.join("");
-      var workbook = XLSX.read(bstr, { type: "binary" });
-      var first_sheet_name = workbook.SheetNames[0];
-      var worksheet = workbook.Sheets[first_sheet_name];
-      this.datas = XLSX.utils.sheet_to_json(worksheet, { raw: true })
-      this.length = this.datas.length
-      console.log("lllllll", this.datas)
-      console.log(this.length);
+  //   let fileReader = new FileReader();
+  //   fileReader.onload = (e) => {
+  //     this.arrayBuffer = fileReader.result;
+  //     var data = new Uint8Array(this.arrayBuffer);
+  //     var arr = new Array();
+  //     for (var i = 0; i != data.length; ++i) arr[i] = String.fromCharCode(data[i]);
+  //     var bstr = arr.join("");
+  //     var workbook = XLSX.read(bstr, { type: "binary" });
+  //     var first_sheet_name = workbook.SheetNames[0];
+  //     var worksheet = workbook.Sheets[first_sheet_name];
+  //     this.datas = XLSX.utils.sheet_to_json(worksheet, { raw: true })
+  //     this.length = this.datas.length
+  //     console.log("lllllll", this.datas)
+  //     console.log(this.length);
 
-      var stulist = this.datas
-      for (var a = 0; a < stulist.length; a++) {
-        this.alldata.push(this.datas[a])
+  //     var stulist = this.datas
+  //     for (var a = 0; a < stulist.length; a++) {
+  //       this.alldata.push(this.datas[a])
 
-        // this.web3.request_to_supplier(this.alldata[a].manufactureid,this.alldata[a].supplierid,this.alldata[a].materialid,this.alldata[a].materialname,this.alldata[a].quantity).then(receipt=>{
-        //   console.log("addded requests ", receipt);
+  //       // this.web3.request_to_supplier(this.alldata[a].manufactureid,this.alldata[a].supplierid,this.alldata[a].materialid,this.alldata[a].materialname,this.alldata[a].quantity).then(receipt=>{
+  //       //   console.log("addded requests ", receipt);
 
-        //   })
-      }
-      console.log("ddddd", this.alldata[0].manufactureid);
+  //       //   })
+  //     }
+  //     console.log("ddddd", this.alldata[0].manufactureid);
 
-      console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
-
-
+  //     console.log(XLSX.utils.sheet_to_json(worksheet, { raw: true }));
 
 
-    }
-    fileReader.readAsArrayBuffer(this.file);
 
-  }
-  viewtable() {
-    this.Viewexcel();
-    this.table1 = true;
-    this.alldata = []
-  }
+
+  //   }
+  //   fileReader.readAsArrayBuffer(this.file);
+
+  // }
+  // viewtable() {
+  //   this.Viewexcel();
+  //   this.table1 = true;
+  //   this.alldata = []
+  // }
   verify() {
     var stulist = this.datas
     for (var a = 0; a < stulist.length; a++) {

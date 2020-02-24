@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "Subrat",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +18,8 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "nodemailer": "^5.1.1"
+  },
+  "engines": {
+    "node": "v10.16.0"
   }
 }

@@ -39,8 +39,6 @@ export class DistributerRegistrationComponent implements OnInit {
             console.log("matids", result);
             if (result[0] != "") {
               this.matid.push(result);
-              console.log(this.matid);
-
             }
           })
         }

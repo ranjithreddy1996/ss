@@ -109,7 +109,7 @@ export class DistributerRegistrationComponent implements OnInit {
           pass: result[3],
         }
 
-        this.http.sendEmail("https://ranjithmailservice.herokuapp.com/sendmail", user).subscribe(
+        this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
           data => {
             let res: any = data;
             console.log(

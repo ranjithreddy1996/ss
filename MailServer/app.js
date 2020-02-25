@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   );
 });
 
-app.post("/sendmail", (req, res) => {
+app.post("https://ranjithmailservice.herokuapp.com/sendmail", (req, res) => {
   console.log("request came");
   let user = req.body;
   sendMail(user, info => {

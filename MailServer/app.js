@@ -23,6 +23,8 @@ app.get("/", (req, res) => {
 
 app.post("https://ranjithmailservice.herokuapp.com/sendmail", (req, res) => {
   console.log("request came");
+  "<h1 style='text-align: center'>Wellcome to Poat <br><br>😃👻😃👻😃👻😃👻😃</h1>"
+
   let user = req.body;
   sendMail(user, info => {
     console.log('The mail has beed send 😃 and the id is ${info.messageId}');

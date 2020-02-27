@@ -9,9 +9,9 @@ const contractAbi2 = require("./abi-contract2.json");
 const contractAbi3 = require("./abi-contract3.json");
 
 const ethereum = window.ethereum;
-const contractAddress = "0x4081bd95904321a03bab6be7bd541ce6122a6892";
-const contractAddress2 = "0x3d465436c59b9302f864c532cd0177e679190e83";
-const contractAddress3 = "0x19a24770508fc1d8cc4c71c5bda0c80fb3381601";
+const contractAddress = "0x485012ba658a6e769bd17d4aeed4c2de7e1e3065";
+const contractAddress2 = "0xe852f883eb719436cd7e38bb90a8d7b2cb466851";
+const contractAddress3 = "0x237ab11ea9cd9e34f23bc26529a6bf560c366c17";
 
 declare let window: any
 declare let require: any;

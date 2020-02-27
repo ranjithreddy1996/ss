@@ -56,7 +56,7 @@ export class DistributerRegistrationComponent implements OnInit {
         for (var m = ids.length - 1; m >= 0; m--) {
           this.web3.request(ids[m]).then(result => {
             console.log("matids", result);
-            if (result[9] == 7) {
+            if (result[8] == 7) {
 
               this.registration.push(result);
               console.log(this.registration);
@@ -119,22 +119,22 @@ export class DistributerRegistrationComponent implements OnInit {
           }, () => {
           }
         );
-            let sms = {
-              number: ServiceData.mobile_number, 
+        let sms = {
+          number: ServiceData.mobile_number,
           id: ServiceData.id,
-         pass: result[3],
+          pass: result[3],
 
-          }
-          this.http.sendSmss("http://localhost:4000/sendsms", sms).subscribe(
+        }
+        this.http.sendSmss("http://localhost:4000/sendsms", sms).subscribe(
           smsdata => {
-            let res:any = smsdata; 
+            let res: any = smsdata;
             console.log('successfully registered and sms has been sent');
           },
           err => {
             console.log(err);
-          },() => {
+          }, () => {
           }
-          );
+        );
         this.ngOnInit();
 
       })

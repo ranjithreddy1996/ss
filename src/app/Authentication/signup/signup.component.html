@@ -6,6 +6,7 @@
 
         <div class="modal-body" style="    margin-top: -60px;">
             <h4 class="text-center font-medium text-dark">Registration Form </h4>
+            <!-- addingUniversity(ServiceData)" -->
             <form #universityForm="ngForm" (ngSubmit)="universityForm.form.valid">
                 <div class=" row">
                     <!--Category Name-->
@@ -21,7 +22,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                         <div class="form-group">
                             <label for="regsitersupplierid">User ID </label>
                             <input type="text" id="regsitersupplierid" name="manufactureid"
@@ -34,15 +35,46 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-12">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label for="regsitersupplierid">User Id</label>
-                           <select id="buy">
-                               <option *ngFor="let customer of complete" [value]="get"(click)="selected($event, customer.id)" >{{customer}}</option>
+                           <select id="buy" class="form-control"  (change)="selected($event)">
+                               <option *ngFor="let customer of complete" >{{customer}}</option>
                            </select>
                         </div>
+                    </div> -->
+                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label >Requested To<span style="color: red;font-size: 18px;">*</span></label>
+        
+                         <select class="form-control form_color"    name="designations"  (change)="selected($event)"  style="height: 43px;">
+                            <option >Select </option>
+        
+                             <!-- <option *ngFor="let data of sats ">{{data.designation}}</option> -->
+                             <option value="1">Admin</option>
+                             <option value="2">Supplier</option>
+                             <option value="3">Manufacture</option>
+                             <option value="4">Distributer</option>
+        
+                         </select>
+                           
+                        </div>
+                    </div> 
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label >Names<span style="color: red;font-size: 18px;">*</span></label>
+        
+                         <select class="form-control form_color" style="height: 43px;" (change)="get($event)">
+                            <option >Select Name</option>
+                            <option *ngFor="let dat of data ">{{dat}}</option>
+                          
+        
+                         </select>
+                           
+                        </div>
                     </div>
-                     -->
 
                     <div class="col-md-12">
                         <div class="form-group">

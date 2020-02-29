@@ -170,6 +170,8 @@ this.web3.updatepassword(Servicedata.eid,Servicedata.epassword,Servicedata.newpa
             icon: 'success',
             confirmButtonText: 'OK',
           });
+          this.router.navigate(['login']);
+
         }
 })
   }
@@ -206,6 +208,8 @@ this.web3.updatepassword(Servicedata.eid,Servicedata.epassword,Servicedata.newpa
             icon: 'success',
             confirmButtonText: 'OK',
           });
+          this.router.navigate(['login']);
+
         }
       
     })

@@ -25,7 +25,7 @@ modalReference: NgbModalRef;
     let getData = JSON.parse(localStorage.getItem('supplier'));
 console.log(getData);
 
-    this.web3._contract.getPastEvents('supplier_form_damage', { fromBlock: 0, toBlock: 'latest' }, (error, event) => { console.log(event); })
+    this.web3._contract3.getPastEvents('supplier_form_damage', { fromBlock: 0, toBlock: 'latest' }, (error, event) => { console.log(event); })
     .then((event) => {
       for (var i = 0; i < event.length; i++) {
         if(event[i].returnValues.fromid ===  getData&&event[i].returnValues.toid==="empty"){

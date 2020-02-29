@@ -124,7 +124,6 @@ export class SupplierRegistrationComponent implements OnInit {
         //   },() => {
         //   }
         //   );
-        this.ngOnInit();
       })
       this.modalReference.close();
 
@@ -133,6 +132,8 @@ export class SupplierRegistrationComponent implements OnInit {
         icon: 'success',
         confirmButtonText: 'OK',
       });
+      this.ngOnInit();
+
     })
 
   }
